@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Poppins:wght@300&display=swap");
+
+.loginInfo1 form,
+.createAccount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 50%;
+  margin: 5% auto;
+  padding: 5%;
+  gap: 10px;
+  background-color: rgb(68, 102, 102);
+  color: white;
+  border-radius: 20px;
+
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  height: 50px;
+}
+
+a {
+  color: white;
+}
+
+/* media for mobile */
+
+@media screen and (max-width: 450px) {
+  .loginInfo1 form,
+  .createAccount {
+    width: 70%;
+  }
+}
