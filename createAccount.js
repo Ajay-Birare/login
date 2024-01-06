@@ -49,3 +49,5 @@ function storeData(username, password) {
 }
 
 console.log(JSON.parse(localStorage.getItem("userLoginData")));
+
+// done
