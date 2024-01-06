@@ -18,11 +18,11 @@ let pass = document.querySelector("#passWord");
 
 if (localStorage.length == 0) {
   const dataBase = [{ userName: "Ajay Birare", passWord: "123" }];
-  localStorage.setItem("data", JSON.stringify(dataBase));
+  localStorage.setItem("userLoginData", JSON.stringify(dataBase));
 }
-const dataBase = JSON.parse(localStorage.getItem("data"));
+const dataBase = JSON.parse(localStorage.getItem("userLoginData"));
 
-localStorage.setItem("data", JSON.stringify(dataBase));
+localStorage.setItem("userLoginData", JSON.stringify(dataBase));
 console.log(localStorage);
 
 //______________________________________________________________________
@@ -31,7 +31,7 @@ console.log(localStorage);
 loginInfoForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const datas = JSON.parse(localStorage.getItem("data"));
+  const datas = JSON.parse(localStorage.getItem("userLoginData"));
 
   let flag = false;
   datas.forEach((data) => {
@@ -59,7 +59,7 @@ loginInfoForm.addEventListener("submit", (event) => {
 //   console.log(newUser.value);
 //   console.log(newPass.value);
 
-//   let customerData = JSON.parse(localStorage.getItem("data"));
+//   let customerData = JSON.parse(localStorage.getItem("userLoginData"));
 
 //   //   before going to create new account
 //   //   check the user is already here or not
@@ -90,11 +90,11 @@ loginInfoForm.addEventListener("submit", (event) => {
 //Storage
 
 function storeData(username, password) {
-  let objArray = JSON.parse(localStorage.getItem("data"));
+  let objArray = JSON.parse(localStorage.getItem("userLoginData"));
   let newUser = { userName: username, passWord: password };
 
   objArray.push(newUser);
-  localStorage.setItem("data", JSON.stringify(objArray));
+  localStorage.setItem("userLoginData", JSON.stringify(objArray));
 }
 
-console.log(JSON.parse(localStorage.getItem("data")));
+console.log(JSON.parse(localStorage.getItem("userLoginData")));
