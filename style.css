@@ -16,14 +16,38 @@
 
   font-family: "Bricolage Grotesque", sans-serif;
   font-family: "Poppins", sans-serif;
+  text-align: center;
+  box-shadow: 5px 5px 20px 1px black;
+}
+.created-sc {
+  display: none;
+}
+
+input:focus {
+  outline: none;
+}
+.submit {
+  /* color: red; */
+  padding: 2% 3%;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(48, 86, 86);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.submit:hover {
+  background-color: rgb(86, 140, 140);
 }
 
 img {
   height: 50px;
 }
-
 a {
   color: white;
+}
+a:hover {
+  color: black;
 }
 
 /* media for mobile */

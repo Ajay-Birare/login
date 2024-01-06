@@ -30,7 +30,13 @@ createAccountForm.addEventListener("submit", (event) => {
     return;
   } else {
     storeData(newUser.value, newPass.value);
-    window.open("accountCreated.html");
+    let crearedSuccess = document.querySelector(".created-sc");
+    crearedSuccess.style.display = "flex";
+
+    let createAccount = document.querySelector(".createAccount");
+    createAccount.style.display = "none";
+    // below is not add because above steps
+    // window.open("accountCreated.html");
   }
 
   newUser.value = "";
