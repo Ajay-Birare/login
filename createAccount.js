@@ -9,7 +9,7 @@ createAccountForm.addEventListener("submit", (event) => {
   console.log(newUser.value);
   console.log(newPass.value);
 
-  let customerData = JSON.parse(localStorage.getItem("data"));
+  let customerData = JSON.parse(localStorage.getItem("userLoginData"));
 
   //   before going to create new account
   //   check the user is already here or not
@@ -41,11 +41,11 @@ createAccountForm.addEventListener("submit", (event) => {
 //Storage
 
 function storeData(username, password) {
-  let objArray = JSON.parse(localStorage.getItem("data"));
+  let objArray = JSON.parse(localStorage.getItem("userLoginData"));
   let newUser = { userName: username, passWord: password };
 
   objArray.push(newUser);
-  localStorage.setItem("data", JSON.stringify(objArray));
+  localStorage.setItem("userLoginData", JSON.stringify(objArray));
 }
 
-console.log(JSON.parse(localStorage.getItem("data")));
+console.log(JSON.parse(localStorage.getItem("userLoginData")));

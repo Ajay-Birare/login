@@ -7,7 +7,7 @@
 // let obj = { userName: "jhon", password: "253" };
 // dataBase.push(obj);
 
-// localStorage.setItem("data", JSON.stringify(dataBase));
+// localStorage.setItem("userLoginData", JSON.stringify(dataBase));
 
 // // console.log(localStorage);
 
@@ -49,7 +49,7 @@
 //   let newUser = { userName: userName.value, password: password.value };
 
 //   dataBase.push(newUser);
-//   localStorage.setItem("data", JSON.stringify(dataBase));
+//   localStorage.setItem("userLoginData", JSON.stringify(dataBase));
 
 //   console.log(dataBase);
 
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let obj = { userName: "jhon", password: "253" };
   dataBase.push(obj);
 
-  localStorage.setItem("data", JSON.stringify(dataBase));
+  localStorage.setItem("userLoginData", JSON.stringify(dataBase));
 
   loginInfoForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     storeData(globalUserName, globalUserPassword);
     dataBase.push(newUser);
-    localStorage.setItem("data", JSON.stringify(dataBase));
+    localStorage.setItem("userLoginData", JSON.stringify(dataBase));
 
     console.log(dataBase);
   });
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function storeData(user, pass) {
     const newObj = { userName: user, password: pass };
     dataBase.push(newObj);
-    localStorage.setItem("data", JSON.stringify(dataBase));
+    localStorage.setItem("userLoginData", JSON.stringify(dataBase));
   }
 
   // export logininfo
