@@ -16,10 +16,12 @@ let pass = document.querySelector("#passWord");
 //______________________________________________________________________
 // const dataBase = [{ userName: "Ajay Birare", passWord: "123" }];
 
-if (localStorage.length == 0) {
+// If localStorage doesn't have userLoginData, initialize it with a default user
+if (localStorage.getItem("userLoginData") === null) {
   const dataBase = [{ userName: "Ajay Birare", passWord: "123" }];
   localStorage.setItem("userLoginData", JSON.stringify(dataBase));
 }
+
 const dataBase = JSON.parse(localStorage.getItem("userLoginData"));
 
 localStorage.setItem("userLoginData", JSON.stringify(dataBase));
