@@ -39,7 +39,7 @@ loginInfoForm.addEventListener("submit", (event) => {
   datas.forEach((data) => {
     if (data.userName == user.value && data.passWord == pass.value) {
       console.log("succesfull ");
-      window.open("page.html");
+      window.location.href = "page.html";
       flag = true;
       return;
     }

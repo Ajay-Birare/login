@@ -30,7 +30,7 @@ createAccountForm.addEventListener("submit", (event) => {
     return;
   } else {
     storeData(newUser.value, newPass.value);
-    window.open("accountCreated.html");
+    window.location.href = "accountCreated.html";
   }
 
   newUser.value = "";
